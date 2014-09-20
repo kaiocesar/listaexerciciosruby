@@ -1,0 +1,19 @@
+<div class="page-header"><h1>Listing all articles</h1></div>
+
+<%= link_to 'New article', new_article_path %>
+
+<table class="table">
+	<tr>
+		<th>Title</th>
+		<th>Text</th>
+	</tr>
+	<tbody>
+		<% @articles.each do |article| %>
+			<tr>
+				<td><%= article.title %></td>
+				<td><%= article.text %></td>
+				<td><%= article.text %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
